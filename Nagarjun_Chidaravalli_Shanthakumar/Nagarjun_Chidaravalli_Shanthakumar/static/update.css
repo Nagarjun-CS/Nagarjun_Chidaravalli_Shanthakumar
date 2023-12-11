@@ -1,0 +1,30 @@
+#heading
+{
+    text-align: center;
+    margin-top: 60px;
+}
+
+#form
+{
+    margin-top: 50px;
+}
+.button-container{
+    display: block;
+}
+
+#copyright{
+    text-align: center;
+    margin-top: 50px;
+}
+.button{
+    width:200px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.button:hover{
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#button-grp {
+    text-align: center;
+}
