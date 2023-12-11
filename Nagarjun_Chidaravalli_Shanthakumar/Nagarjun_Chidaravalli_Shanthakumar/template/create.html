@@ -16,28 +16,56 @@
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12">
             <h1 id="heading">Create a Contact</h1>
-            <form id="form" method="post" action="add/">
-              {% csrf_token %}
-              <div class="mb-3">
-                <label for="contact" class="form-label">Name</label>
-                <input type="text" class="form-control" id="contact" name="name">
-              </div>
-              <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+            {% if error == "contact found" %}
+            <h4>Contact with this name already exists</h4>
+            <form id="form" method="post" action="">
+                {% csrf_token %}
+                <div class="mb-3">
+                  <label for="contact" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="contact" name="name">
                 </div>
                 <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Notes</label>
-                  <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" name="notes" rows="5"></textarea>
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Notes</label>
+                    <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" name="notes" rows="5"></textarea>
+                  </div>
+                <div class="button-container">
+                  <p id="button-grp">
+                    <button class="btn btn-primary button">Submit</button>
+                    <button class="btn btn-info button" type="button" onclick="window.location.href='/'">Cancel</button>
+                  </p>
                 </div>
-              <div class="button-container">
-                <p id="button-grp">
-                  <button class="btn btn-primary button">Submit</button>
-                  <button class="btn btn-info button" type="button" onclick="window.location.href='/'">Cancel</button>
-                </p>
-              </div>
+  
+                </form>
+            {% else %}
+            <form id="form" method="post" action="add/">
+                {% csrf_token %}
+                <div class="mb-3">
+                  <label for="contact" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="contact" name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Notes</label>
+                    <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" name="notes" rows="5"></textarea>
+                  </div>
+                <div class="button-container">
+                  <p id="button-grp">
+                    <button class="btn btn-primary button">Submit</button>
+                    <button class="btn btn-info button" type="button" onclick="window.location.href='/'">Cancel</button>
+                  </p>
+                </div>
+  
+                </form>
+                {% endif %}
 
-              </form>
+
              
 
               <h6 id="copyright">@Created by  Nagarjun Chidaravalli Shanthakumar</h6>

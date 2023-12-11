@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.utils import timezone
 
-
 from create.models import Create
 
 
@@ -15,19 +14,28 @@ def add(request):
     email = request.POST.get("email")
     notes = request.POST.get("notes")
 
-    contact = Create()
-    contact.name = name
-    contact.email = email
-    contact.notes = notes
-    
-    current_datetime_utc = timezone.now()
-    contact.time = current_datetime_utc
+    contactDetails = Create.objects.filter(name=name)
 
-    print("hi there",current_datetime_utc)
+    if contactDetails:
+        print(contactDetails)
+        return render(request, 'create.html',{'error':'contact found'})
+    else:
+        print(contactDetails)
+        print("nno record--------------------")
+
+        contact = Create()
+        contact.name = name
+        contact.email = email
+        contact.notes = notes
+        
+        current_datetime_utc = timezone.now()
+        contact.time = current_datetime_utc
+
+        print("hi there",current_datetime_utc)
 
 
-    contact.save()
+        contact.save()
 
-    contactList = Create.objects.all()
+        contactList = Create.objects.all()
 
-    return render(request, 'home.html',{'contactList':contactList})
+        return render(request, 'home.html',{'contactList':contactList})
