@@ -1,0 +1,44 @@
+#heading
+{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.button-container{
+    display: block;
+}
+#copyright{
+    text-align: center;
+    margin-top: 50px;
+}
+.button1{
+    width:50%;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.button1:hover{
+    transform: scale(1.02); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#button-grp1 {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button2{
+    width:100%;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.button2:hover{
+    transform: scale(1.02); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#button-grp2 {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
