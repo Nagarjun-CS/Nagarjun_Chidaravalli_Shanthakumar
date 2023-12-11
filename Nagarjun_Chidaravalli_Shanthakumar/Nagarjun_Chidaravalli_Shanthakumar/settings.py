@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'create',
     'details',
     'update',
+    'confirm'
 ]
 
 MIDDLEWARE = [

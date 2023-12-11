@@ -1,0 +1,23 @@
+#heading
+{
+    text-align: center;
+    margin-top: 60px;
+}
+.button-container{
+    display: block;
+}
+#copyright{
+    text-align: center;
+    margin-top: 150px;
+}
+p{
+    margin-top: 50px;
+}
+button{
+    margin-top: 15px;
+}
+
+.button:hover{
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

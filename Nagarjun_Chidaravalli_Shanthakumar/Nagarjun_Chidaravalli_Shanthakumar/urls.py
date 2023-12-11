@@ -23,5 +23,5 @@ urlpatterns = [
     path('create/', include('create.urls')),
     path('details/', include('details.urls')),
     path('update/', include('update.urls')),
-
+    path('confirm/', include('confirm.urls'))
 ]
