@@ -27,4 +27,7 @@ def saveUpdatedContact(request):
 
     contactDetails.save()
 
-    return render(request, 'update.html')
+    contactList = Create.objects.all()
+
+
+    return render(request, 'home.html',{'contactList':contactList})
