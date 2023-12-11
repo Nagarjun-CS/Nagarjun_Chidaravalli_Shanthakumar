@@ -13,7 +13,7 @@
 <body>
     <h1 id="heading">Confirm Delete </h1>
     <div class="container">
-        <p>Are you sure you want to delete {{name}} ?</p>
+        <p style="font-size: 20px;">Are you sure you want to delete <strong>{{name}} ?</strong></p>
         <form action="/confirm/deleteRecord/" method="POST">
             {% csrf_token %}
             <div class="button-container btn-lg">
